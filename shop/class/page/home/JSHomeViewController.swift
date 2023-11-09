@@ -12,6 +12,7 @@ import FSPagerView
 import RxSwift
 import RxCocoa
 import RxDataSources
+import WCDBSwift
 
 
 
@@ -42,7 +43,7 @@ class JSHomeViewController: UIViewController {
         collectView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "HomeFoot")
         self.view.addSubview(collectView)
         collectView.snp.makeConstraints { make in
-            make.top.equalTo(ScreenTool.NAV_HEIGHT+ScreenTool.STATUS_HEIGHT)
+            make.top.equalTo(UIDevice.NAV_HEIGHT+UIDevice.STATUS_HEIGHT)
             make.bottom.equalTo(0)
             make.left.equalTo(0)
             make.right.equalTo(0)
@@ -95,5 +96,26 @@ class JSHomeViewController: UIViewController {
         ).disposed(by: viewModel.disposeBag)
         
         viewModel.models.asDriver().drive(collectView.rx.items(dataSource: dataSource)).disposed(by: viewModel.disposeBag)
+        
+        
+        collectView.rx.itemSelected.subscribe { index in
+            
+            let user = JSUserModel()
+            user.password = "123456"
+            user.userName = "123"
+            user.headIcon = "31231"
+            try? WCDBUtil.share.dataBase?.insert(user, intoTable: JSUserModel.tableName)
+            
+            
+            
+            
+            
+        }.disposed(by: viewModel.disposeBag)
+       
+        
+        
+        
+        
+        
     }
 }

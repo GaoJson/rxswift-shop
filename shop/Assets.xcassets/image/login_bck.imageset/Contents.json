@@ -1,16 +1,15 @@
 {
   "images" : [
     {
+      "filename" : "login_bck.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_home_tab3_unchecked@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_home_tab3_unchecked@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

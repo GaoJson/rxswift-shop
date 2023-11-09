@@ -11,23 +11,26 @@ import RxRelay
 class JSCatrgoryViewModel {
     
     var page = 1
+    var cid = 0
     
     let leftList = BehaviorRelay<[CategoryModel]>(value: [])
     let rightList = BehaviorRelay<[GoodsModel]>(value: [])
     
+    let refreshStatus = BehaviorRelay<JSRefreshStatus>(value: .none)
+    
     func loadLeftData(){
-        
         HttpTool.getRequest(url: JSApi.goodsMain) {[weak self] res in
             let model = HomeModel.deserialize(from: res as? Dictionary<String, Any>)
             self?.leftList.accept(model?.tgoodsCategoryVos ?? [])
             self?.loadRightData(cid: model?.tgoodsCategoryVos.first?.id ?? 0)
-            
+            self?.refreshStatus.accept(.beingHeaderRefresh)
         } fail: { error in
-          
+            
         }
     }
     
     func loadRightData(cid:Int) {
+        self.cid = cid
         let params = [
            "pageNum":page,
            "pageSize":10,
@@ -40,8 +43,15 @@ class JSCatrgoryViewModel {
             var array =  self?.rightList.value
             array = self?.page==1 ?list:(array ?? [])+list
             self?.rightList.accept(array ?? [])
-        } fail: { error in
+            self?.refreshStatus.accept(.endHeaderRefresh)
+            self?.refreshStatus.accept(.endFooterRefresh)
             
+            if(array!.count >= (listModel?.total)!) {
+                self?.refreshStatus.accept(.noMoreData)
+            }
+        } fail: { error in
+            self.refreshStatus.accept(.endFooterRefresh)
+            self.refreshStatus.accept(.endHeaderRefresh)
         }
     }
     

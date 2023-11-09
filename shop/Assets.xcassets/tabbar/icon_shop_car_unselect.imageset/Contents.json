@@ -5,12 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "ic_home_tab3_unchecked@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_home_tab3_unchecked@3x.png",
+      "filename" : "icon_shop_car_unselect@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

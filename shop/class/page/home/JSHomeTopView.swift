@@ -96,8 +96,6 @@ extension JSHomeTopView:FSPagerViewDataSource,FSPagerViewDelegate {
         let cell:FSPagerViewCell = pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCell", at: index)
         cell.isHighlighted = false
         let model = self.bannerList[index]
-        
-        
         cell.imageView?.kf.setImage(with: URL(string:model.coverImg))
         
         return cell

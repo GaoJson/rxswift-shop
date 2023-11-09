@@ -1,4 +1,5 @@
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 target 'shop' do
@@ -19,5 +20,8 @@ target 'shop' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod 'WCDB.swift'
+  pod 'ZKProgressHUD'
+
   
 end

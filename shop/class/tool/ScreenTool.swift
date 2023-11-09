@@ -13,13 +13,13 @@ extension UIDevice {
     static let SCREEN_WIDTH = UIScreen.main.bounds.width
     static let SCREEN_HEIGHT = UIScreen.main.bounds.height
     
+    static let STATUS_HEIGHT = ScreenTool.singleton.getStatusHeight()
+    static let BOTTOM_HEIGHT = ScreenTool.singleton.getBottomHeight()
     
-    
-    
-    
+    static let NAV_HEIGHT = 44.0
+    static let TABBAR_HEIGHT = 49.0
     
 }
-
 
 
 class ScreenTool:NSObject {
@@ -27,15 +27,9 @@ class ScreenTool:NSObject {
     static let SCREEN_WIDTH = UIScreen.main.bounds.width
     static let SCREEN_HEIGHT = UIScreen.main.bounds.height
     
-    
     static let NAV_HEIGHT = 44.0
     static let TABBAR_HEIGHT = 49.0
-    
-    static let STATUS_HEIGHT = ScreenTool.singleton.getStatusHeight()
-    static let BOTTOM_HEIGHT = ScreenTool.singleton.getBottomHeight()
-    
-    
-    
+
     static let singleton = ScreenTool()
     private override init() {
         super.init()

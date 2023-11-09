@@ -20,6 +20,14 @@ class JSTabbarViewController: UITabBarController {
         view2.tabBarItem = UITabBarItem(title: "分类", image:R.image.ic_home_tab2_unchecked()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.ic_home_tab2_selected()?.withRenderingMode(.alwaysOriginal))
         self.addChild(view2)
         
+        let view3 = UINavigationController(rootViewController: JSShopCarViewController())
+        view3.tabBarItem = UITabBarItem(title: "购物车", image:R.image.ic_home_tab3_unchecked()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.ic_home_tab3_selected()?.withRenderingMode(.alwaysOriginal))
+        self.addChild(view3)
+        
+        let view4 = UINavigationController(rootViewController: JSMineViewController())
+        view4.tabBarItem = UITabBarItem(title: "我的", image:R.image.ic_home_tab5_unchecked()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.ic_home_tab5_selected()?.withRenderingMode(.alwaysOriginal))
+        self.addChild(view4)
+        
         
     }
     
