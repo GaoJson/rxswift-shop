@@ -16,10 +16,22 @@ class JSLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         setUI()
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if #available(iOS 13.0, *) {
+            let appear = UINavigationBarAppearance()
+            appear.backgroundColor = .hexColor(rgbValue: 0xFFFFFF)
+            appear.backgroundEffect = nil
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appear
+            self.navigationController?.navigationBar.standardAppearance = appear
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setUI() {
@@ -71,7 +83,9 @@ class JSLoginViewController: UIViewController {
           let userModel =  JSUserModel.loginAction(count: accountView.text!, pwd: passwordView.text!)
             if(userModel != nil) {
                 Toasts.showInfo(tip: "登录成功")
-                
+                UserInfo.share.isLogin = true
+                UserInfo.share.saveModel(model: userModel!)
+                self.dismiss(animated: true)
             } else {
                 Toasts.showInfo(tip: "账户或密码错误")
             }
@@ -94,7 +108,6 @@ class JSLoginViewController: UIViewController {
                 accountView.text = str1
                 passwordView.text = str2
             }
-            
             self.present(vc, animated: false)
         }.disposed(by: disposeBag)
         

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.statusBarStyle = .default
+        IQKeyboardManager.shared.enable = true
         
+        UserInfo.share.getUser()
         setNavbar()
         WCDBUtil.share.connectDatabase()
         let window = UIWindow.init(frame: UIScreen.main.bounds)

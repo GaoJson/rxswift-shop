@@ -44,7 +44,7 @@ class JSHomeViewController: UIViewController {
         self.view.addSubview(collectView)
         collectView.snp.makeConstraints { make in
             make.top.equalTo(UIDevice.NAV_HEIGHT+UIDevice.STATUS_HEIGHT)
-            make.bottom.equalTo(0)
+            make.bottom.equalTo(-(UIDevice.BOTTOM_HEIGHT+UIDevice.TABBAR_HEIGHT))
             make.left.equalTo(0)
             make.right.equalTo(0)
         }
@@ -63,8 +63,7 @@ class JSHomeViewController: UIViewController {
         let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String,GoodsModel>>(
             configureCell: { (ds, cv, indexPath, model) ->UICollectionViewCell in
                 let cell:HomeGoodsCell = cv.dequeueReusableCell(withReuseIdentifier: "HomeGoodsCell", for: indexPath) as! HomeGoodsCell
-                cell.imageView.kf.setImage(with: URL(string: model.goodsImg))
-                cell.titleLb.text = model.goodsName
+                cell.setModel(model: model)
                 return cell
             }, configureSupplementaryView: { (ds, cv, str, indexPath) ->UICollectionReusableView in
                 

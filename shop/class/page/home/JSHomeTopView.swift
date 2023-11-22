@@ -118,9 +118,9 @@ class CategoryCell:UICollectionViewCell {
         self.addSubview(imgV)
         imgV.snp.makeConstraints({ make in
             make.centerX.equalTo(self)
-            make.width.equalTo(40)
-            make.height.equalTo(40)
-            make.top.equalTo(8)
+            make.width.equalTo(30)
+            make.height.equalTo(30)
+            make.top.equalTo(15)
         })
         img = imgV
         

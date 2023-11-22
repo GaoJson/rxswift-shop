@@ -19,18 +19,22 @@ class WCDBUtil {
             dataBase?.close()
         }
         
-        guard let fileUrl = try? FileManager.default
-            .url(for: .applicationDirectory, in: .userDomainMask,appropriateFor: nil,create: true)
-            .appendingPathComponent("appData.sqlite") else {return}
-                
-        debugPrint("路径：：",fileUrl.path)
-        dataBase = Database(at: fileUrl)
+        let fileManeger = FileManager.default
+        var mainPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last ?? ""
+         
+        let fileUrl = URL(string: mainPath.appending("/appData.sqlite"))
         
+              
+        debugPrint("路径：：",fileUrl!.path)
+
+        dataBase = Database(at: fileUrl!.path)
+
         createTables()
     }
     
     private func createTables() {
         try? dataBase?.create(table: JSUserModel.tableName, of: JSUserModel.self)
+        try? dataBase?.create(table: JSShopCarModel.tableName, of: JSShopCarModel.self)
         
         
     }

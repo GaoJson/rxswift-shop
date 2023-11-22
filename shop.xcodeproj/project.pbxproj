@@ -14,6 +14,12 @@
 		B2027AA42AF38080005496A8 /* JSHomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2027AA32AF38080005496A8 /* JSHomeTopView.swift */; };
 		B2027AA62AF39CC5005496A8 /* JSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2027AA52AF39CC5005496A8 /* JSHomeViewModel.swift */; };
 		B20DAB5A2AFC70E400B56B4B /* Toasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB592AFC70E400B56B4B /* Toasts.swift */; };
+		B20DAB5C2AFE1C5A00B56B4B /* colorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */; };
+		B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */; };
+		B20DAB602AFE1FBB00B56B4B /* JSBaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */; };
+		B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */; };
+		B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CFA582B086C6A008496F9 /* PaddingLabel.swift */; };
+		B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */; };
 		B244B6FB2AF8958D009ED6E0 /* HomeGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B6F92AF8958D009ED6E0 /* HomeGoodsCell.swift */; };
 		B244B6FC2AF8958D009ED6E0 /* HomeGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B244B6FA2AF8958D009ED6E0 /* HomeGoodsCell.xib */; };
 		B244B6FE2AF8D557009ED6E0 /* EnumTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B6FD2AF8D557009ED6E0 /* EnumTool.swift */; };
@@ -41,6 +47,9 @@
 		B2CE86D12AF0E0AF00C8CEF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D02AF0E0AF00C8CEF6 /* R.generated.swift */; };
 		B2CE86D52AF1007D00C8CEF6 /* httpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D42AF1007D00C8CEF6 /* httpTool.swift */; };
 		B2CE86D72AF103C900C8CEF6 /* JSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D62AF103C900C8CEF6 /* JSApi.swift */; };
+		B2E96AA12B0B61B9001F22DA /* JSShopCarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E96A9F2B0B61B9001F22DA /* JSShopCarItemCell.swift */; };
+		B2E96AA22B0B61B9001F22DA /* JSShopCarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E96AA02B0B61B9001F22DA /* JSShopCarItemCell.xib */; };
+		B2E96AA42B0C9369001F22DA /* JSMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -67,6 +76,12 @@
 		B2027AA32AF38080005496A8 /* JSHomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSHomeTopView.swift; sourceTree = "<group>"; };
 		B2027AA52AF39CC5005496A8 /* JSHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSHomeViewModel.swift; sourceTree = "<group>"; };
 		B20DAB592AFC70E400B56B4B /* Toasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toasts.swift; sourceTree = "<group>"; };
+		B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorTool.swift; sourceTree = "<group>"; };
+		B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseViewController.swift; sourceTree = "<group>"; };
+		B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseNavViewController.swift; sourceTree = "<group>"; };
+		B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarTool.swift; sourceTree = "<group>"; };
+		B22CFA582B086C6A008496F9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSShopCarModel.swift; sourceTree = "<group>"; };
 		B244B6F92AF8958D009ED6E0 /* HomeGoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoodsCell.swift; sourceTree = "<group>"; };
 		B244B6FA2AF8958D009ED6E0 /* HomeGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeGoodsCell.xib; sourceTree = "<group>"; };
 		B244B6FD2AF8D557009ED6E0 /* EnumTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTool.swift; sourceTree = "<group>"; };
@@ -96,6 +111,9 @@
 		B2CE86D02AF0E0AF00C8CEF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = live/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B2CE86D42AF1007D00C8CEF6 /* httpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = httpTool.swift; sourceTree = "<group>"; };
 		B2CE86D62AF103C900C8CEF6 /* JSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSApi.swift; sourceTree = "<group>"; };
+		B2E96A9F2B0B61B9001F22DA /* JSShopCarItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSShopCarItemCell.swift; sourceTree = "<group>"; };
+		B2E96AA02B0B61B9001F22DA /* JSShopCarItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSShopCarItemCell.xib; sourceTree = "<group>"; };
+		B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSMineViewModel.swift; sourceTree = "<group>"; };
 		D4A8684B82BEB1CA4403F73A /* Pods-shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shop.release.xcconfig"; path = "Target Support Files/Pods-shop/Pods-shop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +189,7 @@
 		B244B70B2AFA28A6009ED6E0 /* shopCar */ = {
 			isa = PBXGroup;
 			children = (
+				B2E96A9E2B0B6186001F22DA /* view */,
 				B244B70C2AFA28CF009ED6E0 /* JSShopCarViewController.swift */,
 				B244B7182AFB5B0B009ED6E0 /* JSShopCarViewModel.swift */,
 			);
@@ -181,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B244B70F2AFA4624009ED6E0 /* JSUserModel.swift */,
+				B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */,
 				B244B7112AFB1EFB009ED6E0 /* WCDBUtil.swift */,
 				B244B7132AFB3912009ED6E0 /* JSBaseDbModel.swift */,
 			);
@@ -191,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				B244B7162AFB3DC7009ED6E0 /* JSMineViewController.swift */,
+				B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */,
+				B22CFA582B086C6A008496F9 /* PaddingLabel.swift */,
 			);
 			path = mine;
 			sourceTree = "<group>";
@@ -263,6 +285,8 @@
 			children = (
 				B2CE86C02AF0D91100C8CEF6 /* JSTabbarViewController.swift */,
 				B244B71A2AFB5DC5009ED6E0 /* UserInfo.swift */,
+				B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */,
+				B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -286,6 +310,8 @@
 				B244B6FD2AF8D557009ED6E0 /* EnumTool.swift */,
 				B244B71F2AFB6B3B009ED6E0 /* JSTextFiledTool.swift */,
 				B20DAB592AFC70E400B56B4B /* Toasts.swift */,
+				B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */,
+				B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -297,6 +323,15 @@
 				B2CE86D62AF103C900C8CEF6 /* JSApi.swift */,
 			);
 			path = nettool;
+			sourceTree = "<group>";
+		};
+		B2E96A9E2B0B6186001F22DA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B2E96A9F2B0B61B9001F22DA /* JSShopCarItemCell.swift */,
+				B2E96AA02B0B61B9001F22DA /* JSShopCarItemCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +400,7 @@
 				B2CE86B72AF0972600C8CEF6 /* LaunchScreen.storyboard in Resources */,
 				B2CE86B42AF0972600C8CEF6 /* Assets.xcassets in Resources */,
 				B2CE86B22AF0972400C8CEF6 /* Main.storyboard in Resources */,
+				B2E96AA22B0B61B9001F22DA /* JSShopCarItemCell.xib in Resources */,
 				B244B6FC2AF8958D009ED6E0 /* HomeGoodsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +476,10 @@
 				B244B6FE2AF8D557009ED6E0 /* EnumTool.swift in Sources */,
 				B2CE86C12AF0D91100C8CEF6 /* JSTabbarViewController.swift in Sources */,
 				B244B7192AFB5B0B009ED6E0 /* JSShopCarViewModel.swift in Sources */,
+				B2E96AA12B0B61B9001F22DA /* JSShopCarItemCell.swift in Sources */,
+				B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */,
 				B2CE86AF2AF0972400C8CEF6 /* ViewController.swift in Sources */,
+				B2E96AA42B0C9369001F22DA /* JSMineViewModel.swift in Sources */,
 				B244B71B2AFB5DC5009ED6E0 /* UserInfo.swift in Sources */,
 				B244B7142AFB3912009ED6E0 /* JSBaseDbModel.swift in Sources */,
 				B244B7172AFB3DC7009ED6E0 /* JSMineViewController.swift in Sources */,
@@ -450,17 +489,22 @@
 				B244B71E2AFB5F6D009ED6E0 /* JSLoginViewController.swift in Sources */,
 				B2CE86C42AF0DC9500C8CEF6 /* JSHomeViewController.swift in Sources */,
 				B2CE86AB2AF0972400C8CEF6 /* AppDelegate.swift in Sources */,
+				B20DAB5C2AFE1C5A00B56B4B /* colorTool.swift in Sources */,
 				B2027AA62AF39CC5005496A8 /* JSHomeViewModel.swift in Sources */,
 				B244B7092AFA03BE009ED6E0 /* JSCatrgoryCell.swift in Sources */,
+				B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */,
 				B244B7052AF9D898009ED6E0 /* JSCatrgoryViewModel.swift in Sources */,
 				B244B70D2AFA28CF009ED6E0 /* JSShopCarViewController.swift in Sources */,
+				B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */,
 				B2CE86D72AF103C900C8CEF6 /* JSApi.swift in Sources */,
+				B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */,
 				B2027AA22AF372D6005496A8 /* ScreenTool.swift in Sources */,
 				B244B6FB2AF8958D009ED6E0 /* HomeGoodsCell.swift in Sources */,
 				B2027A9E2AF1F630005496A8 /* ResponseModel.swift in Sources */,
 				B20DAB5A2AFC70E400B56B4B /* Toasts.swift in Sources */,
 				B2CE86D52AF1007D00C8CEF6 /* httpTool.swift in Sources */,
 				B244B7222AFB73AC009ED6E0 /* JSRegistViewController.swift in Sources */,
+				B20DAB602AFE1FBB00B56B4B /* JSBaseNavViewController.swift in Sources */,
 				B244B7032AF9D76C009ED6E0 /* JSCategoryViewController.swift in Sources */,
 				B2027AA42AF38080005496A8 /* JSHomeTopView.swift in Sources */,
 				B244B7202AFB6B3B009ED6E0 /* JSTextFiledTool.swift in Sources */,

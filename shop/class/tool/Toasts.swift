@@ -11,7 +11,7 @@ import ZKProgressHUD
 class Toasts {
     
     static func showInfo(tip:String) {
-        ZKProgressHUD.showInfo(tip)
+        ZKProgressHUD.showInfo(tip,maskStyle: .hide)
     }
     
     

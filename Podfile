@@ -22,6 +22,7 @@ target 'shop' do
   pod 'RxDataSources'
   pod 'WCDB.swift'
   pod 'ZKProgressHUD'
+  pod 'IQKeyboardManagerSwift'
 
   
 end

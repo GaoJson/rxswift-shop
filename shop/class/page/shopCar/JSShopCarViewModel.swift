@@ -11,9 +11,15 @@ import RxCocoa
 
 class JSShopCarViewModel {
     
-    let dataList = BehaviorRelay<[JSUserModel]>(value: [])
+    let bag = DisposeBag()
+    
+    let dataList = BehaviorRelay<[JSShopCarModel]>(value: [])
     
     
+    func loadList(){
+        let list = JSShopCarModel.getModelList()
+        dataList.accept(list)
+    }
     
     
     

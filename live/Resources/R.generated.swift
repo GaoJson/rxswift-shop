@@ -46,7 +46,7 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 16 images.
+  /// This `_R.image` struct is generated, and contains static references to 37 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -80,11 +80,74 @@ struct _R {
     /// Image `ic_home_tab5_unchecked`.
     var ic_home_tab5_unchecked: RswiftResources.ImageResource { .init(name: "ic_home_tab5_unchecked", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
+    /// Image `ic_my_invite`.
+    var ic_my_invite: RswiftResources.ImageResource { .init(name: "ic_my_invite", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_order_1`.
+    var ic_my_order_1: RswiftResources.ImageResource { .init(name: "ic_my_order_1", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_order_2`.
+    var ic_my_order_2: RswiftResources.ImageResource { .init(name: "ic_my_order_2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_order_3`.
+    var ic_my_order_3: RswiftResources.ImageResource { .init(name: "ic_my_order_3", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_order_4`.
+    var ic_my_order_4: RswiftResources.ImageResource { .init(name: "ic_my_order_4", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_order_5`.
+    var ic_my_order_5: RswiftResources.ImageResource { .init(name: "ic_my_order_5", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_1`.
+    var ic_my_service_1: RswiftResources.ImageResource { .init(name: "ic_my_service_1", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_2`.
+    var ic_my_service_2: RswiftResources.ImageResource { .init(name: "ic_my_service_2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_3`.
+    var ic_my_service_3: RswiftResources.ImageResource { .init(name: "ic_my_service_3", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_4`.
+    var ic_my_service_4: RswiftResources.ImageResource { .init(name: "ic_my_service_4", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_5`.
+    var ic_my_service_5: RswiftResources.ImageResource { .init(name: "ic_my_service_5", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_6`.
+    var ic_my_service_6: RswiftResources.ImageResource { .init(name: "ic_my_service_6", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_7`.
+    var ic_my_service_7: RswiftResources.ImageResource { .init(name: "ic_my_service_7", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_my_service_8`.
+    var ic_my_service_8: RswiftResources.ImageResource { .init(name: "ic_my_service_8", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_arrow_right_gray`.
+    var icon_arrow_right_gray: RswiftResources.ImageResource { .init(name: "icon_arrow_right_gray", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_arrow_right_white`.
+    var icon_arrow_right_white: RswiftResources.ImageResource { .init(name: "icon_arrow_right_white", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `icon_login_account`.
     var icon_login_account: RswiftResources.ImageResource { .init(name: "icon_login_account", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_login_password`.
     var icon_login_password: RswiftResources.ImageResource { .init(name: "icon_login_password", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_my_defeatImg`.
+    var icon_my_defeatImg: RswiftResources.ImageResource { .init(name: "icon_my_defeatImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_setting`.
+    var icon_setting: RswiftResources.ImageResource { .init(name: "icon_setting", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_sever`.
+    var icon_sever: RswiftResources.ImageResource { .init(name: "icon_sever", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_shop_car_select`.
+    var icon_shop_car_select: RswiftResources.ImageResource { .init(name: "icon_shop_car_select", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_shop_car_un_select`.
+    var icon_shop_car_un_select: RswiftResources.ImageResource { .init(name: "icon_shop_car_un_select", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_shop_car_unselect`.
     var icon_shop_car_unselect: RswiftResources.ImageResource { .init(name: "icon_shop_car_unselect", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -99,7 +162,7 @@ struct _R {
     var shopcar: RswiftResources.ImageResource { .init(name: "shopcar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -109,11 +172,15 @@ struct _R {
     /// Nib `JSCatrgoryCell`.
     var jsCatrgoryCell: RswiftResources.NibReference<JSCatrgoryCell> { .init(name: "JSCatrgoryCell", bundle: bundle) }
 
+    /// Nib `JSShopCarItemCell`.
+    var jsShopCarItemCell: RswiftResources.NibReference<JSShopCarItemCell> { .init(name: "JSShopCarItemCell", bundle: bundle) }
+
     func validate() throws {
       if UIKit.UIImage(named: "shopcar", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'shopcar' is used in nib 'HomeGoodsCell', but couldn't be loaded.") }
       if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "trash.circle.fill") == nil { throw RswiftResources.ValidationError("[R.swift] System image named 'trash.circle.fill' is used in nib 'HomeGoodsCell', but couldn't be loaded.") } }
       if UIKit.UIImage(named: "logo", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'logo' is used in nib 'JSCatrgoryCell', but couldn't be loaded.") }
       if UIKit.UIImage(named: "shopcar", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'shopcar' is used in nib 'JSCatrgoryCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "logo", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'logo' is used in nib 'JSShopCarItemCell', but couldn't be loaded.") }
     }
   }
 
