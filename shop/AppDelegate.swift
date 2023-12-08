@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.statusBarStyle = .default
         IQKeyboardManager.shared.enable = true
+        debugPrint(ScreenTool.SCREEN_WIDTH)
+        debugPrint(10.w)
         
         UserInfo.share.getUser()
         setNavbar()

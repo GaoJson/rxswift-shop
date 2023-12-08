@@ -17,6 +17,7 @@
 		B20DAB5C2AFE1C5A00B56B4B /* colorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */; };
 		B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */; };
 		B20DAB602AFE1FBB00B56B4B /* JSBaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */; };
+		B215686B2B2059C8002847EE /* SelectAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215686A2B2059C8002847EE /* SelectAddressModel.swift */; };
 		B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */; };
 		B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CFA582B086C6A008496F9 /* PaddingLabel.swift */; };
 		B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */; };
@@ -37,6 +38,13 @@
 		B244B71E2AFB5F6D009ED6E0 /* JSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B71D2AFB5F6D009ED6E0 /* JSLoginViewController.swift */; };
 		B244B7202AFB6B3B009ED6E0 /* JSTextFiledTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B71F2AFB6B3B009ED6E0 /* JSTextFiledTool.swift */; };
 		B244B7222AFB73AC009ED6E0 /* JSRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B7212AFB73AC009ED6E0 /* JSRegistViewController.swift */; };
+		B2C58FFC2B142DAD00EB1821 /* JSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58FFB2B142DAD00EB1821 /* JSAddressViewController.swift */; };
+		B2C590002B1462D000EB1821 /* JSAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58FFE2B1462D000EB1821 /* JSAddressCell.swift */; };
+		B2C590012B1462D000EB1821 /* JSAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C58FFF2B1462D000EB1821 /* JSAddressCell.xib */; };
+		B2C590032B146D7000EB1821 /* JSAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C590022B146D6F00EB1821 /* JSAddressModel.swift */; };
+		B2C590062B14773500EB1821 /* JSEditAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C590042B14773400EB1821 /* JSEditAddressViewController.swift */; };
+		B2C590092B15DC6200EB1821 /* JSAddressPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C590082B15DC6200EB1821 /* JSAddressPicker.swift */; };
+		B2C5900C2B173A0D00EB1821 /* city_data.json in Resources */ = {isa = PBXBuildFile; fileRef = B2C5900B2B173A0D00EB1821 /* city_data.json */; };
 		B2CE86AB2AF0972400C8CEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86AA2AF0972400C8CEF6 /* AppDelegate.swift */; };
 		B2CE86AF2AF0972400C8CEF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86AE2AF0972400C8CEF6 /* ViewController.swift */; };
 		B2CE86B22AF0972400C8CEF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CE86B02AF0972400C8CEF6 /* Main.storyboard */; };
@@ -79,6 +87,7 @@
 		B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorTool.swift; sourceTree = "<group>"; };
 		B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseViewController.swift; sourceTree = "<group>"; };
 		B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseNavViewController.swift; sourceTree = "<group>"; };
+		B215686A2B2059C8002847EE /* SelectAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressModel.swift; sourceTree = "<group>"; };
 		B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarTool.swift; sourceTree = "<group>"; };
 		B22CFA582B086C6A008496F9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSShopCarModel.swift; sourceTree = "<group>"; };
@@ -99,6 +108,13 @@
 		B244B71D2AFB5F6D009ED6E0 /* JSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSLoginViewController.swift; sourceTree = "<group>"; };
 		B244B71F2AFB6B3B009ED6E0 /* JSTextFiledTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextFiledTool.swift; sourceTree = "<group>"; };
 		B244B7212AFB73AC009ED6E0 /* JSRegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSRegistViewController.swift; sourceTree = "<group>"; };
+		B2C58FFB2B142DAD00EB1821 /* JSAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressViewController.swift; sourceTree = "<group>"; };
+		B2C58FFE2B1462D000EB1821 /* JSAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressCell.swift; sourceTree = "<group>"; };
+		B2C58FFF2B1462D000EB1821 /* JSAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSAddressCell.xib; sourceTree = "<group>"; };
+		B2C590022B146D6F00EB1821 /* JSAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressModel.swift; sourceTree = "<group>"; };
+		B2C590042B14773400EB1821 /* JSEditAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSEditAddressViewController.swift; sourceTree = "<group>"; };
+		B2C590082B15DC6200EB1821 /* JSAddressPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressPicker.swift; sourceTree = "<group>"; };
+		B2C5900B2B173A0D00EB1821 /* city_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city_data.json; sourceTree = "<group>"; };
 		B2CE86A72AF0972400C8CEF6 /* shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CE86AA2AF0972400C8CEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CE86AE2AF0972400C8CEF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +158,7 @@
 			children = (
 				B2027A9D2AF1F630005496A8 /* ResponseModel.swift */,
 				B2027A9F2AF21B6D005496A8 /* HomeModel.swift */,
+				B215686A2B2059C8002847EE /* SelectAddressModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -203,6 +220,7 @@
 				B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */,
 				B244B7112AFB1EFB009ED6E0 /* WCDBUtil.swift */,
 				B244B7132AFB3912009ED6E0 /* JSBaseDbModel.swift */,
+				B2C590022B146D6F00EB1821 /* JSAddressModel.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -210,6 +228,7 @@
 		B244B7152AFB3DA4009ED6E0 /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				B2C58FFA2B142D7F00EB1821 /* vc */,
 				B244B7162AFB3DC7009ED6E0 /* JSMineViewController.swift */,
 				B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */,
 				B22CFA582B086C6A008496F9 /* PaddingLabel.swift */,
@@ -233,6 +252,34 @@
 				D4A8684B82BEB1CA4403F73A /* Pods-shop.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2C58FFA2B142D7F00EB1821 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				B2C58FFD2B1444C500EB1821 /* view */,
+				B2C58FFB2B142DAD00EB1821 /* JSAddressViewController.swift */,
+				B2C590042B14773400EB1821 /* JSEditAddressViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		B2C58FFD2B1444C500EB1821 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B2C58FFE2B1462D000EB1821 /* JSAddressCell.swift */,
+				B2C58FFF2B1462D000EB1821 /* JSAddressCell.xib */,
+				B2C590082B15DC6200EB1821 /* JSAddressPicker.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B2C5900A2B1739F100EB1821 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				B2C5900B2B173A0D00EB1821 /* city_data.json */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 		B2CE869E2AF0972400C8CEF6 = {
@@ -271,6 +318,7 @@
 		B2CE86BE2AF0D83A00C8CEF6 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				B2C5900A2B1739F100EB1821 /* res */,
 				B244B70E2AFA4600009ED6E0 /* db */,
 				B244B6FF2AF9D460009ED6E0 /* page */,
 				B2027A9C2AF1F4C0005496A8 /* model */,
@@ -396,11 +444,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C5900C2B173A0D00EB1821 /* city_data.json in Resources */,
 				B244B70A2AFA03BE009ED6E0 /* JSCatrgoryCell.xib in Resources */,
 				B2CE86B72AF0972600C8CEF6 /* LaunchScreen.storyboard in Resources */,
 				B2CE86B42AF0972600C8CEF6 /* Assets.xcassets in Resources */,
 				B2CE86B22AF0972400C8CEF6 /* Main.storyboard in Resources */,
 				B2E96AA22B0B61B9001F22DA /* JSShopCarItemCell.xib in Resources */,
+				B2C590012B1462D000EB1821 /* JSAddressCell.xib in Resources */,
 				B244B6FC2AF8958D009ED6E0 /* HomeGoodsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,8 +524,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B244B6FE2AF8D557009ED6E0 /* EnumTool.swift in Sources */,
+				B2C590002B1462D000EB1821 /* JSAddressCell.swift in Sources */,
+				B215686B2B2059C8002847EE /* SelectAddressModel.swift in Sources */,
 				B2CE86C12AF0D91100C8CEF6 /* JSTabbarViewController.swift in Sources */,
 				B244B7192AFB5B0B009ED6E0 /* JSShopCarViewModel.swift in Sources */,
+				B2C590032B146D7000EB1821 /* JSAddressModel.swift in Sources */,
 				B2E96AA12B0B61B9001F22DA /* JSShopCarItemCell.swift in Sources */,
 				B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */,
 				B2CE86AF2AF0972400C8CEF6 /* ViewController.swift in Sources */,
@@ -491,12 +544,15 @@
 				B2CE86AB2AF0972400C8CEF6 /* AppDelegate.swift in Sources */,
 				B20DAB5C2AFE1C5A00B56B4B /* colorTool.swift in Sources */,
 				B2027AA62AF39CC5005496A8 /* JSHomeViewModel.swift in Sources */,
+				B2C590062B14773500EB1821 /* JSEditAddressViewController.swift in Sources */,
 				B244B7092AFA03BE009ED6E0 /* JSCatrgoryCell.swift in Sources */,
 				B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */,
 				B244B7052AF9D898009ED6E0 /* JSCatrgoryViewModel.swift in Sources */,
 				B244B70D2AFA28CF009ED6E0 /* JSShopCarViewController.swift in Sources */,
 				B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */,
 				B2CE86D72AF103C900C8CEF6 /* JSApi.swift in Sources */,
+				B2C590092B15DC6200EB1821 /* JSAddressPicker.swift in Sources */,
+				B2C58FFC2B142DAD00EB1821 /* JSAddressViewController.swift in Sources */,
 				B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */,
 				B2027AA22AF372D6005496A8 /* ScreenTool.swift in Sources */,
 				B244B6FB2AF8958D009ED6E0 /* HomeGoodsCell.swift in Sources */,

@@ -15,3 +15,5 @@ enum JSRefreshStatus {
     case endFooterRefresh
     case noMoreData
 }
+
+

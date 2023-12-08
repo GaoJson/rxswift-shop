@@ -22,11 +22,11 @@ class JSShopCarItemCell: UITableViewCell {
     @IBOutlet weak var countTf: UITextField!
     
     var models:JSShopCarModel?
-    var bags:DisposeBag?
+    var viewModel:JSShopCarViewModel?
     
-    func setModel(model:JSShopCarModel,bag:DisposeBag){
+    func setModel(model:JSShopCarModel,viewModels:JSShopCarViewModel){
         models = model
-        bags = bag
+        viewModel = viewModels
         goodImg.kf.setImage(with: URL(string: model.goodsImg ?? ""))
         titleLb.text = model.goodsName
         priceLb.text = model.goodsPrice
@@ -46,6 +46,7 @@ class JSShopCarItemCell: UITableViewCell {
         }
         JSShopCarModel.updateModel(model: models!)
         (self.superview as! UITableView).reloadData()
+        viewModel!.countPrice()
     }
     
    
@@ -56,6 +57,7 @@ class JSShopCarItemCell: UITableViewCell {
         }
         JSShopCarModel.updateModel(model: models!)
         (self.superview as! UITableView).reloadData()
+        viewModel!.countPrice()
     }
     
     
@@ -63,7 +65,7 @@ class JSShopCarItemCell: UITableViewCell {
         models!.count! += 1
         JSShopCarModel.updateModel(model: models!)
         (self.superview as! UITableView).reloadData()
-        
+        viewModel!.countPrice()
         
     }
     
@@ -86,11 +88,13 @@ class JSShopCarItemCell: UITableViewCell {
         }
         JSShopCarModel.updateModel(model: models!)
         (self.superview as! UITableView).reloadData()
+        viewModel!.countPrice()
+        setSelected(false, animated: false)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

@@ -84,13 +84,33 @@ extension JSShopCarModel {
     }
     
     static func deleteModel(){
-        try? WCDBUtil.share.dataBase?.delete(fromTable: JSShopCarModel.tableName)
+        try? WCDBUtil.share.dataBase?.delete(fromTable: tableName)
+    }
+    
+    static func deleteModelWithId(id:Int){
+        try? WCDBUtil.share.dataBase?.delete(fromTable: tableName,where: Properties.id==id)
+        
     }
     
     static func updateModel(model:JSShopCarModel) {
-        try? WCDBUtil.share.dataBase?.update(table: JSShopCarModel.tableName,
+        try? WCDBUtil.share.dataBase?.update(table: tableName,
                                              on: JSShopCarModel.Properties.all,
                                              with: model, where: (JSShopCarModel.Properties.id==model.id!))
+    }
+    
+    static func selectAll(select:Bool){
+        let model = JSShopCarModel()
+        
+        if select {
+            model.selectFlag = 1
+        } else {
+            model.selectFlag = 0
+        }
+        try? WCDBUtil.share.dataBase?.update(table: tableName,
+                                             on: [JSShopCarModel.Properties.selectFlag],
+                                             with: model,
+                                             where: Properties.userId==UserInfo.share.user.id!)
+        
     }
     
 }

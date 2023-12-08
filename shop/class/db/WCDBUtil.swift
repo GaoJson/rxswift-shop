@@ -35,7 +35,7 @@ class WCDBUtil {
     private func createTables() {
         try? dataBase?.create(table: JSUserModel.tableName, of: JSUserModel.self)
         try? dataBase?.create(table: JSShopCarModel.tableName, of: JSShopCarModel.self)
-        
+        try? dataBase?.create(table: JSAddressModel.tableName, of: JSAddressModel.self)
         
     }
     

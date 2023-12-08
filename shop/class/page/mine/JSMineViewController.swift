@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class JSMineViewController: UIViewController {
+class JSMineViewController: JSBaseViewController {
 
     let viewModel = JSMineViewModel()
     let disposeBag = DisposeBag()
@@ -116,8 +116,8 @@ class JSMineViewController: UIViewController {
         inviteImg.contentMode = .scaleAspectFit
         headView.addSubview(inviteImg)
         inviteImg.snp.makeConstraints { make in
-            make.leading.equalTo(10)
-            make.trailing.equalTo(-10)
+            make.left.equalTo(10)
+            make.width.equalTo(UIDevice.SCREEN_WIDTH-20)
             make.height.equalTo(309/1034*(UIDevice.SCREEN_WIDTH-20))
             make.top.equalTo(orderView.snp.bottom).offset(10)
         }
@@ -127,7 +127,7 @@ class JSMineViewController: UIViewController {
         headView.addSubview(serviceView)
         serviceView.snp.makeConstraints { make in
             make.left.equalTo(10)
-            make.trailing.equalToSuperview().offset(-10)
+            make.width.equalTo(UIDevice.SCREEN_WIDTH-20)
             make.height.equalTo(190)
             make.top.equalTo(inviteImg.snp.bottom).offset(10)
         }
@@ -278,7 +278,7 @@ class JSMineViewController: UIViewController {
                 make.centerX.equalToSuperview()
             }
             let badge = PaddingLabel()
-            badge.text = "97"
+            badge.text = ""
             badge.textColor = .white
             badge.adjustsFontSizeToFitWidth = true;
             badge.textAlignment = .center
@@ -326,7 +326,7 @@ class JSMineViewController: UIViewController {
                                              forCellWithReuseIdentifier: "Cell")
         view.addSubview(collectView)
         let list = Observable.just([
-            "我的快递","我的快递","我的快递","我的快递","我的快递","我的快递","我的快递","我的快递"
+            "我的地址","我的收藏","我的快递","我的快递","我的快递","我的快递","我的快递","我的快递"
         ])
         list.bind(to: collectView.rx.items) {(collectionView, row, element) in
             let indexPath = IndexPath(row: row, section: 0)
@@ -335,7 +335,13 @@ class JSMineViewController: UIViewController {
             cell.titleLabel?.text = element
             return cell
         }.disposed(by: disposeBag)
-        
+        collectView.rx.itemSelected.subscribe { index in
+           let i = index.element!.row
+            
+            self.navigationController?.pushViewController(JSAddressViewController(), animated: true)
+            
+            
+        }.disposed(by: disposeBag)
         
     }
 

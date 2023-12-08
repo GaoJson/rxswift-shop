@@ -23,7 +23,7 @@ extension UIDevice {
 
 
 class ScreenTool:NSObject {
-    
+
     static let SCREEN_WIDTH = UIScreen.main.bounds.width
     static let SCREEN_HEIGHT = UIScreen.main.bounds.height
     
@@ -35,6 +35,9 @@ class ScreenTool:NSObject {
         super.init()
     }
     
+    var designWidth = 750
+    var designHeight = 1334
+        
     var statusHeight:CGFloat = 0.0
     func getStatusHeight()->CGFloat {
         if(statusHeight > 0) {
@@ -68,9 +71,17 @@ class ScreenTool:NSObject {
         
         return bottomHeight
     }
-    
-    
-    
+}
+
+
+
+extension Int {
+     var w: Double {
+            get {
+                let data = (Double(ScreenTool.singleton.designWidth)/Double(UIScreen.main.bounds.width)) * Double(self)
+                return Double(round(10 * data) / 10)
+            }
+        }
 }
 
 

@@ -23,5 +23,12 @@ class NavbarTool {
         return UIBarButtonItem(customView: view);
     }
     
+    static func barButtonItem(bag:DisposeBag,title:String,callBack:@escaping()->())->UIBarButtonItem {
+        let barBtn = UIBarButtonItem(title: title, style: .done, target: self, action: nil);
+        barBtn.rx.tap.subscribe { _ in
+          callBack()
+        }.disposed(by:bag)
+        return barBtn
+    }
     
 }

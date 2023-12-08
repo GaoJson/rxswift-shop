@@ -14,6 +14,7 @@ struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
@@ -21,6 +22,9 @@ struct _R {
     .init(bundle: bundle)
   }
   func image(bundle: Foundation.Bundle) -> image {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func nib(bundle: Foundation.Bundle) -> nib {
@@ -46,7 +50,7 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 37 images.
+  /// This `_R.image` struct is generated, and contains static references to 38 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -128,6 +132,9 @@ struct _R {
     /// Image `icon_arrow_right_white`.
     var icon_arrow_right_white: RswiftResources.ImageResource { .init(name: "icon_arrow_right_white", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
+    /// Image `icon_edit`.
+    var icon_edit: RswiftResources.ImageResource { .init(name: "icon_edit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `icon_login_account`.
     var icon_login_account: RswiftResources.ImageResource { .init(name: "icon_login_account", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
@@ -162,12 +169,23 @@ struct _R {
     var shopcar: RswiftResources.ImageResource { .init(name: "shopcar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `city_data.json`.
+    var city_dataJson: RswiftResources.FileResource { .init(name: "city_data", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+  }
+
+  /// This `_R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
     /// Nib `HomeGoodsCell`.
     var homeGoodsCell: RswiftResources.NibReference<HomeGoodsCell> { .init(name: "HomeGoodsCell", bundle: bundle) }
+
+    /// Nib `JSAddressCell`.
+    var jsAddressCell: RswiftResources.NibReference<JSAddressCell> { .init(name: "JSAddressCell", bundle: bundle) }
 
     /// Nib `JSCatrgoryCell`.
     var jsCatrgoryCell: RswiftResources.NibReference<JSCatrgoryCell> { .init(name: "JSCatrgoryCell", bundle: bundle) }
