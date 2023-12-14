@@ -14,4 +14,6 @@ public struct JSApi {
     
     static let goodsList = "goods/v1/good"
     
+    static let goodsDetail = "goods/v1/"
+    
 }

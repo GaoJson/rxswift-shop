@@ -29,7 +29,7 @@ class JSShopCarItemCell: UITableViewCell {
         viewModel = viewModels
         goodImg.kf.setImage(with: URL(string: model.goodsImg ?? ""))
         titleLb.text = model.goodsName
-        priceLb.text = model.goodsPrice
+        priceLb.text = "\(Double(model.goodsPrice ?? "0") ?? 0)"
         countTf.text = "\(model.count!)"
         if (model.selectFlag != nil) {
             selectBtn.isSelected = model.selectFlag!==1

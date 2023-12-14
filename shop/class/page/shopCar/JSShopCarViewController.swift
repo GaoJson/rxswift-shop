@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class JSShopCarViewController: UIViewController {
+class JSShopCarViewController: JSBaseViewController {
 
     let viewModel = JSShopCarViewModel()
     
@@ -18,8 +18,15 @@ class JSShopCarViewController: UIViewController {
         super.viewDidLoad()
         self.title = "购物车"
         setUI()
-        self.navigationController?.tabBarItem.badgeValue = "20"
         
+        UserInfo.share.shopCarNotice.subscribe { _ in
+          let count = JSShopCarModel.allCount()
+            if (count > 0) {
+                self.navigationController?.tabBarItem.badgeValue = "\(count)"
+            }else {
+                self.navigationController?.tabBarItem.badgeValue = nil
+            }
+        }.disposed(by: viewModel.bag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +36,7 @@ class JSShopCarViewController: UIViewController {
     func setUI() {
        
         let buyBottomView = UIView()
+        viewModel.bottomView = buyBottomView
         buyBottomView.backgroundColor = .white
         self.view.addSubview(buyBottomView)
         buyBottomView.snp.makeConstraints { make in
@@ -48,7 +56,7 @@ class JSShopCarViewController: UIViewController {
         }
         tableView.rowHeight = 100
         tableView.register(UINib(nibName: "JSShopCarItemCell", bundle: nil), forCellReuseIdentifier: "JSShopCarItemCell")
-       
+        viewModel.tableView = tableView
         
         viewModel.dataList.asDriver().drive(tableView.rx.items(cellIdentifier: "JSShopCarItemCell", cellType: JSShopCarItemCell.self)){
             (row,model,cell) in
@@ -154,6 +162,16 @@ class JSShopCarViewController: UIViewController {
             make.centerY.equalToSuperview()
             make.height.equalTo(30)
         }
+        buyBtn.rx.tap.subscribe { _ in
+            let list = self.viewModel.getSelectGoods()
+            if(list.count == 0) {
+                Toasts.showInfo(tip: "暂无选择商品")
+                return
+            }
+            let vc = JSOrderSubmitViewController()
+            vc.goodsList = list
+            self.navigationController?.pushViewController(vc, animated: true)
+        }.disposed(by: viewModel.bag)
         
         viewModel.goodsPrice.subscribe { value in
             allpriceValue.text = value
@@ -191,11 +209,5 @@ class JSShopCarViewController: UIViewController {
             }
             self!.viewModel.deleteGoods()
         }.disposed(by: viewModel.bag)
-        
-        
-        
     }
-
-   
-
 }

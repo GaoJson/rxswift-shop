@@ -26,7 +26,6 @@ extension UIColor {
             }
         }
     class func hexColor(rgbValue: UInt)-> UIColor {
-
             return  UIColor(
                 red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
                 green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -35,6 +34,20 @@ extension UIColor {
             )
         }
     
-    
+    class var black33: UIColor {
+            get {
+                return  hexColor(rgbValue: 0x333333)
+            }
+        }
+    class var black66: UIColor {
+            get {
+                return  hexColor(rgbValue: 0x666666)
+            }
+        }
+    class var black99: UIColor {
+            get {
+                return  hexColor(rgbValue: 0x999999)
+            }
+        }
     
 }

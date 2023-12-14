@@ -16,7 +16,7 @@ import WCDBSwift
 
 
 
-class JSHomeViewController: UIViewController {
+class JSHomeViewController: JSBaseViewController {
     
     var viewModel = JSHomeViewModel()
    
@@ -98,13 +98,10 @@ class JSHomeViewController: UIViewController {
         
         
         collectView.rx.itemSelected.subscribe { index in
-            
-            let user = JSUserModel()
-            user.password = "123456"
-            user.userName = "123"
-            user.headIcon = "31231"
-            try? WCDBUtil.share.dataBase?.insert(user, intoTable: JSUserModel.tableName)
-            
+            let model = self.viewModel.models.value.first?.items[index.element!.row]
+            let vc = JSGoodsDetailViewController()
+            vc.goodsId = model!.id
+            self.navigationController?.pushViewController(vc, animated: true)
             
             
             

@@ -16,7 +16,8 @@ final class JSUserModel:TableCodable {
     
     var id: Int? = nil
     var userName: String? = nil
-    var headIcon: String? = nil
+    var nickName: String = "默认用户"
+    var headIcon: String = "https://upload.jianshu.io/users/upload_avatars/6539412/69075f35-f3f1-4d33-b325-215d530b1620.jpg"
     var password: String? = nil
     required init() {}
        
@@ -24,6 +25,7 @@ final class JSUserModel:TableCodable {
         typealias Root = JSUserModel
         case id
         case userName
+        case nickName
         case headIcon
         case password
         
@@ -55,9 +57,14 @@ extension JSUserModel {
     
     
     func save(){
-        try! WCDBUtil.share.dataBase?.insert(self, intoTable: JSUserModel.tableName)
+        try? WCDBUtil.share.dataBase?.insert(self, intoTable: JSUserModel.tableName)
     }
     
+    func update() {
+        try? WCDBUtil.share.dataBase?.update(table: JSUserModel.tableName,
+                                             on: JSUserModel.Properties.all,
+                                             with: self, where: (JSUserModel.Properties.id==self.id!))
+    }
     
     
 }

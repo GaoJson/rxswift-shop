@@ -11,8 +11,11 @@ class JSBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        // Do any additional setup after loading the view.
+        let backItem = UIBarButtonItem()
+        backItem.title = "";
+        backItem.tintColor = .gray
+        self.navigationItem.backBarButtonItem = backItem;
+        self.view.backgroundColor = .bckColor
     }
     
 

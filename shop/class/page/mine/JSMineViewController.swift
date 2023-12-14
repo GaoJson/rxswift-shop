@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxDataSources
+import Kingfisher
 
 class JSMineViewController: JSBaseViewController {
 
@@ -43,6 +44,7 @@ class JSMineViewController: JSBaseViewController {
         }
         if(UserInfo.share.isLogin){
             viewModel.userModel.accept(UserInfo.share.user)
+            viewModel.loadOrder()
         } else {
             viewModel.userModel.accept(JSUserModel())
         }
@@ -53,14 +55,26 @@ class JSMineViewController: JSBaseViewController {
     }
     
     func setUI(){
-       
+        
         
         self.navigationItem.rightBarButtonItems = [
             NavbarTool.barButtonItem(bag:disposeBag,images: R.image.icon_setting()!){
                 
+              
+              
             },
             NavbarTool.barButtonItem(bag:disposeBag,images: R.image.icon_sever()!){
-                debugPrint("11111")
+                
+                let picker = UIImagePickerController ()
+                 //设置代理
+                 picker.delegate = self
+                 //指定图片控制器类型
+                 picker.sourceType = .photoLibrary
+                 //设置是否允许编辑
+                 picker.allowsEditing = true
+                 //弹出控制器，显示界面
+                self.present(picker, animated: true)
+                
             }
         ]
         
@@ -143,7 +157,6 @@ class JSMineViewController: JSBaseViewController {
         userView.frame = CGRect(x: 0, y: 0, width: UIDevice.SCREEN_WIDTH, height: 90)
         view.addSubview(userView)
         let headIcon = UIImageView()
-        headIcon.kf.setImage(with: URL(string: "https://upload.jianshu.io/users/upload_avatars/6539412/69075f35-f3f1-4d33-b325-215d530b1620.jpg"))
         userView.addSubview(headIcon)
         headIcon.layer.cornerRadius = 8
         headIcon.layer.masksToBounds = true
@@ -155,7 +168,6 @@ class JSMineViewController: JSBaseViewController {
         }
         
         let userName = UILabel()
-        userName.text = "王思聪";
         userName.textColor = .white
         userView.addSubview(userName)
         userName.snp.makeConstraints { make in
@@ -163,8 +175,8 @@ class JSMineViewController: JSBaseViewController {
             make.top.equalTo(headIcon).offset(0)
         }
         
+        
         let mobile = UILabel()
-        mobile.text = "18030***157";
         mobile.textColor = .white
         userView.addSubview(mobile)
         mobile.snp.makeConstraints { make in
@@ -188,7 +200,9 @@ class JSMineViewController: JSBaseViewController {
         loginBtn.backgroundColor = view.backgroundColor
         userView.isHidden = true
         loginBtn.rx.tap.subscribe { _ in
-            self.present(JSLoginViewController(), animated: true)
+            let vc = JSLoginViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         }.disposed(by: disposeBag)
         
         let loginIcon = UIImageView()
@@ -215,9 +229,9 @@ class JSMineViewController: JSBaseViewController {
             if(e.element?.id != nil){
                 loginBtn.isHidden = true
                 userView.isHidden = false
-                userName.text = e.element?.userName
+                userName.text = e.element?.nickName
                 mobile.text = e.element?.userName
-                
+                headIcon.kf.setImage(with: URL(string: (e.element?.headIcon) ?? ""))
             } else {
                 loginBtn.isHidden = false
                 userView.isHidden = true
@@ -247,10 +261,25 @@ class JSMineViewController: JSBaseViewController {
             make.height.equalTo(20)
             make.width.equalTo(20)
         }
+        let allBtn = UIButton()
+        allBtn.setTitleColor(.black99, for: .normal)
+        allBtn.titleLabel?.font = .systemFont(ofSize: 14)
+        allBtn.setTitle("全部订单", for: .normal)
+        views.addSubview(allBtn)
+        allBtn.snp.makeConstraints { make in
+            make.centerY.equalTo(orderTitle)
+            make.right.equalTo(orderArrow.snp.left).offset(-5)
+        }
+        allBtn.rx.tap.subscribe { _ in
+            
+            self.navigationController?.pushViewController(JSOrderListViewController(), animated: true)
+        }.disposed(by: disposeBag)
+        
+        
         let orderItem = ["待支付","待发货","已发货","待评价"]
         var badgeList = Array<UILabel>()
         for index in 0..<orderItem.count {
-            let view = UIView()
+            let view = UIButton()
             views.addSubview(view)
             view.snp.makeConstraints { make in
                 make.bottom.equalTo(0)
@@ -258,6 +287,13 @@ class JSMineViewController: JSBaseViewController {
                 make.width.equalTo((UIDevice.SCREEN_WIDTH-20)/4.0)
                 make.top.equalTo(40)
             }
+            view.rx.tap.subscribe { _ in
+                UserInfo.share.judgeLogin(vc: self) {
+                    let vc = JSOrderListViewController()
+                    vc.viewModel.currectIndex = index + 1
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }.disposed(by: disposeBag)
             
             let icon = UIImageView()
             icon.image = UIImage(named: "ic_my_order_\(index+1)")
@@ -278,6 +314,7 @@ class JSMineViewController: JSBaseViewController {
                 make.centerX.equalToSuperview()
             }
             let badge = PaddingLabel()
+            badge.isHidden = true
             badge.text = ""
             badge.textColor = .white
             badge.adjustsFontSizeToFitWidth = true;
@@ -295,7 +332,17 @@ class JSMineViewController: JSBaseViewController {
             }
             badgeList.append(badge)
         }
-        
+        viewModel.orderList.subscribe { list in
+            for i in 0 ..< list.element!.count {
+                let count = list.element![i]
+                if(count > 0)  {
+                    badgeList[i].isHidden = false
+                    badgeList[i].text = "\(count)"
+                } else {
+                    badgeList[i].isHidden = true
+                }
+            }
+        }.disposed(by: disposeBag)
         
         
     }
@@ -336,7 +383,7 @@ class JSMineViewController: JSBaseViewController {
             return cell
         }.disposed(by: disposeBag)
         collectView.rx.itemSelected.subscribe { index in
-           let i = index.element!.row
+           
             
             self.navigationController?.pushViewController(JSAddressViewController(), animated: true)
             
@@ -344,7 +391,22 @@ class JSMineViewController: JSBaseViewController {
         }.disposed(by: disposeBag)
         
     }
+}
 
-
-
+extension JSMineViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let keys = "app_user_\(UserInfo.share.user.id!)_image.png"
+        KingfisherManager.shared.cache.store(image, forKey: keys, options: KingfisherParsedOptionsInfo(.none))
+        UserInfo.share.user.headIcon = keys
+        UserInfo.share.user.update()
+        UserInfo.share.saveModel(model: UserInfo.share.user)
+        self.viewModel.userModel.accept(UserInfo.share.user)
+        
+        picker.dismiss(animated: true)
+    }
+    
+    
 }

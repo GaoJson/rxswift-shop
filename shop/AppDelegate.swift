@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = UIColor.white; //背景色
             appearance.shadowColor = UIColor.black; //阴影
-          
+            
         } else {
             // Fallback on earlier versions
         };
@@ -49,6 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.configureWithOpaqueBackground()
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            let backImage = R.image.icon_arrow_right_gray()
+            UINavigationBar.appearance().backIndicatorImage = backImage
+            UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
             
             let tabbar = UITabBarAppearance()
             tabbar.configureWithDefaultBackground()

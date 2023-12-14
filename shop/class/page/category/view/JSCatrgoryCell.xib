@@ -58,11 +58,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addShopCar" destination="4vq-IR-NtT" id="WhD-3v-ZAb"/>
                 <outlet property="img" destination="OoW-Kf-WSi" id="F1a-bT-STD"/>
                 <outlet property="name" destination="1kF-7s-H8b" id="xYu-GF-uir"/>
                 <outlet property="price" destination="ZIw-cY-1fJ" id="FMD-kx-ikw"/>
             </connections>
-            <point key="canvasLocation" x="-122.13740458015266" y="20.774647887323944"/>
+            <point key="canvasLocation" x="-649" y="21"/>
         </tableViewCell>
     </objects>
     <resources>

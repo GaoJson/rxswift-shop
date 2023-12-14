@@ -18,6 +18,9 @@
 		B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */; };
 		B20DAB602AFE1FBB00B56B4B /* JSBaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */; };
 		B215686B2B2059C8002847EE /* SelectAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215686A2B2059C8002847EE /* SelectAddressModel.swift */; };
+		B215686D2B22E481002847EE /* JSBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215686C2B22E481002847EE /* JSBannerCell.swift */; };
+		B21568702B22EABE002847EE /* JSGoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215686F2B22EABE002847EE /* JSGoodsDetailViewController.swift */; };
+		B21568722B22F8B7002847EE /* JSBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21568712B22F8B7002847EE /* JSBannerView.swift */; };
 		B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */; };
 		B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CFA582B086C6A008496F9 /* PaddingLabel.swift */; };
 		B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */; };
@@ -38,6 +41,13 @@
 		B244B71E2AFB5F6D009ED6E0 /* JSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B71D2AFB5F6D009ED6E0 /* JSLoginViewController.swift */; };
 		B244B7202AFB6B3B009ED6E0 /* JSTextFiledTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B71F2AFB6B3B009ED6E0 /* JSTextFiledTool.swift */; };
 		B244B7222AFB73AC009ED6E0 /* JSRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B244B7212AFB73AC009ED6E0 /* JSRegistViewController.swift */; };
+		B290E8402B26AB5600AE118B /* JSOrderSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E83F2B26AB5600AE118B /* JSOrderSubmitViewController.swift */; };
+		B290E8422B26B7E600AE118B /* JSOrderSubmitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E8412B26B7E600AE118B /* JSOrderSubmitViewModel.swift */; };
+		B290E8442B27029500AE118B /* JSOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E8432B27029500AE118B /* JSOrderModel.swift */; };
+		B290E8462B270D6000AE118B /* JSStringTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E8452B270D6000AE118B /* JSStringTool.swift */; };
+		B290E8482B284B8E00AE118B /* JSOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E8472B284B8E00AE118B /* JSOrderListViewController.swift */; };
+		B290E84A2B284C1D00AE118B /* JSOrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E8492B284C1C00AE118B /* JSOrderListViewModel.swift */; };
+		B290E84C2B297F6100AE118B /* scrollviewTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290E84B2B297F6100AE118B /* scrollviewTool.swift */; };
 		B2C58FFC2B142DAD00EB1821 /* JSAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58FFB2B142DAD00EB1821 /* JSAddressViewController.swift */; };
 		B2C590002B1462D000EB1821 /* JSAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58FFE2B1462D000EB1821 /* JSAddressCell.swift */; };
 		B2C590012B1462D000EB1821 /* JSAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C58FFF2B1462D000EB1821 /* JSAddressCell.xib */; };
@@ -88,6 +98,9 @@
 		B20DAB5D2AFE1ECD00B56B4B /* JSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseViewController.swift; sourceTree = "<group>"; };
 		B20DAB5F2AFE1FBB00B56B4B /* JSBaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBaseNavViewController.swift; sourceTree = "<group>"; };
 		B215686A2B2059C8002847EE /* SelectAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressModel.swift; sourceTree = "<group>"; };
+		B215686C2B22E481002847EE /* JSBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBannerCell.swift; sourceTree = "<group>"; };
+		B215686F2B22EABE002847EE /* JSGoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSGoodsDetailViewController.swift; sourceTree = "<group>"; };
+		B21568712B22F8B7002847EE /* JSBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBannerView.swift; sourceTree = "<group>"; };
 		B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarTool.swift; sourceTree = "<group>"; };
 		B22CFA582B086C6A008496F9 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B233F0BD2B0B297A00E3DF01 /* JSShopCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSShopCarModel.swift; sourceTree = "<group>"; };
@@ -108,6 +121,13 @@
 		B244B71D2AFB5F6D009ED6E0 /* JSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSLoginViewController.swift; sourceTree = "<group>"; };
 		B244B71F2AFB6B3B009ED6E0 /* JSTextFiledTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextFiledTool.swift; sourceTree = "<group>"; };
 		B244B7212AFB73AC009ED6E0 /* JSRegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSRegistViewController.swift; sourceTree = "<group>"; };
+		B290E83F2B26AB5600AE118B /* JSOrderSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderSubmitViewController.swift; sourceTree = "<group>"; };
+		B290E8412B26B7E600AE118B /* JSOrderSubmitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderSubmitViewModel.swift; sourceTree = "<group>"; };
+		B290E8432B27029500AE118B /* JSOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderModel.swift; sourceTree = "<group>"; };
+		B290E8452B270D6000AE118B /* JSStringTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSStringTool.swift; sourceTree = "<group>"; };
+		B290E8472B284B8E00AE118B /* JSOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderListViewController.swift; sourceTree = "<group>"; };
+		B290E8492B284C1C00AE118B /* JSOrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderListViewModel.swift; sourceTree = "<group>"; };
+		B290E84B2B297F6100AE118B /* scrollviewTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollviewTool.swift; sourceTree = "<group>"; };
 		B2C58FFB2B142DAD00EB1821 /* JSAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressViewController.swift; sourceTree = "<group>"; };
 		B2C58FFE2B1462D000EB1821 /* JSAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAddressCell.swift; sourceTree = "<group>"; };
 		B2C58FFF2B1462D000EB1821 /* JSAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSAddressCell.xib; sourceTree = "<group>"; };
@@ -163,11 +183,24 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		B215686E2B22EAA0002847EE /* shop */ = {
+			isa = PBXGroup;
+			children = (
+				B215686F2B22EABE002847EE /* JSGoodsDetailViewController.swift */,
+				B290E83F2B26AB5600AE118B /* JSOrderSubmitViewController.swift */,
+				B290E8412B26B7E600AE118B /* JSOrderSubmitViewModel.swift */,
+				B290E8472B284B8E00AE118B /* JSOrderListViewController.swift */,
+				B290E8492B284C1C00AE118B /* JSOrderListViewModel.swift */,
+			);
+			path = shop;
+			sourceTree = "<group>";
+		};
 		B244B6F82AF89567009ED6E0 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				B244B6F92AF8958D009ED6E0 /* HomeGoodsCell.swift */,
 				B244B6FA2AF8958D009ED6E0 /* HomeGoodsCell.xib */,
+				B215686C2B22E481002847EE /* JSBannerCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -175,6 +208,7 @@
 		B244B6FF2AF9D460009ED6E0 /* page */ = {
 			isa = PBXGroup;
 			children = (
+				B215686E2B22EAA0002847EE /* shop */,
 				B244B71C2AFB5F5C009ED6E0 /* login */,
 				B244B7152AFB3DA4009ED6E0 /* mine */,
 				B244B70B2AFA28A6009ED6E0 /* shopCar */,
@@ -221,6 +255,7 @@
 				B244B7112AFB1EFB009ED6E0 /* WCDBUtil.swift */,
 				B244B7132AFB3912009ED6E0 /* JSBaseDbModel.swift */,
 				B2C590022B146D6F00EB1821 /* JSAddressModel.swift */,
+				B290E8432B27029500AE118B /* JSOrderModel.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -360,6 +395,9 @@
 				B20DAB592AFC70E400B56B4B /* Toasts.swift */,
 				B20DAB5B2AFE1C5A00B56B4B /* colorTool.swift */,
 				B21B3A4C2B05BB5100AFE108 /* navbarTool.swift */,
+				B21568712B22F8B7002847EE /* JSBannerView.swift */,
+				B290E8452B270D6000AE118B /* JSStringTool.swift */,
+				B290E84B2B297F6100AE118B /* scrollviewTool.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -526,34 +564,44 @@
 				B244B6FE2AF8D557009ED6E0 /* EnumTool.swift in Sources */,
 				B2C590002B1462D000EB1821 /* JSAddressCell.swift in Sources */,
 				B215686B2B2059C8002847EE /* SelectAddressModel.swift in Sources */,
+				B21568722B22F8B7002847EE /* JSBannerView.swift in Sources */,
 				B2CE86C12AF0D91100C8CEF6 /* JSTabbarViewController.swift in Sources */,
 				B244B7192AFB5B0B009ED6E0 /* JSShopCarViewModel.swift in Sources */,
+				B21568702B22EABE002847EE /* JSGoodsDetailViewController.swift in Sources */,
 				B2C590032B146D7000EB1821 /* JSAddressModel.swift in Sources */,
 				B2E96AA12B0B61B9001F22DA /* JSShopCarItemCell.swift in Sources */,
 				B21B3A4D2B05BB5100AFE108 /* navbarTool.swift in Sources */,
+				B290E8402B26AB5600AE118B /* JSOrderSubmitViewController.swift in Sources */,
 				B2CE86AF2AF0972400C8CEF6 /* ViewController.swift in Sources */,
 				B2E96AA42B0C9369001F22DA /* JSMineViewModel.swift in Sources */,
 				B244B71B2AFB5DC5009ED6E0 /* UserInfo.swift in Sources */,
 				B244B7142AFB3912009ED6E0 /* JSBaseDbModel.swift in Sources */,
 				B244B7172AFB3DC7009ED6E0 /* JSMineViewController.swift in Sources */,
 				B244B7122AFB1EFB009ED6E0 /* WCDBUtil.swift in Sources */,
+				B290E8462B270D6000AE118B /* JSStringTool.swift in Sources */,
 				B2027AA02AF21B6D005496A8 /* HomeModel.swift in Sources */,
 				B2CE86D12AF0E0AF00C8CEF6 /* R.generated.swift in Sources */,
 				B244B71E2AFB5F6D009ED6E0 /* JSLoginViewController.swift in Sources */,
+				B290E8422B26B7E600AE118B /* JSOrderSubmitViewModel.swift in Sources */,
 				B2CE86C42AF0DC9500C8CEF6 /* JSHomeViewController.swift in Sources */,
 				B2CE86AB2AF0972400C8CEF6 /* AppDelegate.swift in Sources */,
+				B290E8442B27029500AE118B /* JSOrderModel.swift in Sources */,
 				B20DAB5C2AFE1C5A00B56B4B /* colorTool.swift in Sources */,
 				B2027AA62AF39CC5005496A8 /* JSHomeViewModel.swift in Sources */,
+				B290E84C2B297F6100AE118B /* scrollviewTool.swift in Sources */,
 				B2C590062B14773500EB1821 /* JSEditAddressViewController.swift in Sources */,
 				B244B7092AFA03BE009ED6E0 /* JSCatrgoryCell.swift in Sources */,
 				B233F0BE2B0B297A00E3DF01 /* JSShopCarModel.swift in Sources */,
 				B244B7052AF9D898009ED6E0 /* JSCatrgoryViewModel.swift in Sources */,
 				B244B70D2AFA28CF009ED6E0 /* JSShopCarViewController.swift in Sources */,
+				B215686D2B22E481002847EE /* JSBannerCell.swift in Sources */,
 				B20DAB5E2AFE1ECD00B56B4B /* JSBaseViewController.swift in Sources */,
 				B2CE86D72AF103C900C8CEF6 /* JSApi.swift in Sources */,
 				B2C590092B15DC6200EB1821 /* JSAddressPicker.swift in Sources */,
 				B2C58FFC2B142DAD00EB1821 /* JSAddressViewController.swift in Sources */,
 				B22CFA592B086C6A008496F9 /* PaddingLabel.swift in Sources */,
+				B290E8482B284B8E00AE118B /* JSOrderListViewController.swift in Sources */,
+				B290E84A2B284C1D00AE118B /* JSOrderListViewModel.swift in Sources */,
 				B2027AA22AF372D6005496A8 /* ScreenTool.swift in Sources */,
 				B244B6FB2AF8958D009ED6E0 /* HomeGoodsCell.swift in Sources */,
 				B2027A9E2AF1F630005496A8 /* ResponseModel.swift in Sources */,

@@ -7,8 +7,9 @@
 
 import Foundation
 import WCDBSwift
+import HandyJSON
 
-final class JSShopCarModel:TableCodable {
+final class JSShopCarModel:TableCodable,HandyJSON {
     
 static let tableName = "JSShopCarModel"
    
@@ -70,6 +71,7 @@ extension JSShopCarModel {
                                                  on: JSShopCarModel.Properties.all,
                                                  with: row!, where: (JSShopCarModel.Properties.shopId==model.id))
         }
+       UserInfo.share.shopCarNotice.accept("")
        Toasts.showInfo(tip: "添加成功")
     }
     
@@ -85,10 +87,12 @@ extension JSShopCarModel {
     
     static func deleteModel(){
         try? WCDBUtil.share.dataBase?.delete(fromTable: tableName)
+        UserInfo.share.shopCarNotice.accept("")
     }
     
     static func deleteModelWithId(id:Int){
         try? WCDBUtil.share.dataBase?.delete(fromTable: tableName,where: Properties.id==id)
+        UserInfo.share.shopCarNotice.accept("")
         
     }
     
@@ -96,6 +100,13 @@ extension JSShopCarModel {
         try? WCDBUtil.share.dataBase?.update(table: tableName,
                                              on: JSShopCarModel.Properties.all,
                                              with: model, where: (JSShopCarModel.Properties.id==model.id!))
+    }
+    
+    static func allCount()->Int {
+        let descriptionColumn = try! WCDBUtil.share.dataBase?.getColumn(on: Properties.id.count(), fromTable: tableName)
+        let count = descriptionColumn?.first?.int32Value ?? 0
+        return Int(count)
+        
     }
     
     static func selectAll(select:Bool){
@@ -110,7 +121,6 @@ extension JSShopCarModel {
                                              on: [JSShopCarModel.Properties.selectFlag],
                                              with: model,
                                              where: Properties.userId==UserInfo.share.user.id!)
-        
     }
     
 }

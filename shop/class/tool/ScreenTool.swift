@@ -78,7 +78,7 @@ class ScreenTool:NSObject {
 extension Int {
      var w: Double {
             get {
-                let data = (Double(ScreenTool.singleton.designWidth)/Double(UIScreen.main.bounds.width)) * Double(self)
+                let data = (Double(UIScreen.main.bounds.width)/Double(ScreenTool.singleton.designWidth)) * Double(self)
                 return Double(round(10 * data) / 10)
             }
         }

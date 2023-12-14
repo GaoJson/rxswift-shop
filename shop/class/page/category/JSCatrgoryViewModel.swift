@@ -16,13 +16,15 @@ class JSCatrgoryViewModel {
     let leftList = BehaviorRelay<[CategoryModel]>(value: [])
     let rightList = BehaviorRelay<[GoodsModel]>(value: [])
     
+    var rightTable:UITableView?
+    
     let refreshStatus = BehaviorRelay<JSRefreshStatus>(value: .none)
     
     func loadLeftData(){
         HttpTool.getRequest(url: JSApi.goodsMain) {[weak self] res in
             let model = HomeModel.deserialize(from: res as? Dictionary<String, Any>)
             self?.leftList.accept(model?.tgoodsCategoryVos ?? [])
-            self?.loadRightData(cid: model?.tgoodsCategoryVos.first?.id ?? 0)
+            self?.loadRightData(cid: model?.tgoodsCategoryVos[1].id ?? 0)
             self?.refreshStatus.accept(.beingHeaderRefresh)
         } fail: { error in
             
@@ -48,6 +50,11 @@ class JSCatrgoryViewModel {
             
             if(array!.count >= (listModel?.total)!) {
                 self?.refreshStatus.accept(.noMoreData)
+            }
+            if (array?.count == 0) {
+                self?.rightTable?.noData?.isHidden = false
+            } else {
+                self?.rightTable?.noData?.isHidden = true
             }
         } fail: { error in
             self.refreshStatus.accept(.endFooterRefresh)

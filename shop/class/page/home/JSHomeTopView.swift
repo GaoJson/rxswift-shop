@@ -40,7 +40,7 @@ class JSHomeTopView: UIView {
         let pageView = FSPagerView(frame:CGRect(x: 0, y: 0, width: ScreenTool.SCREEN_WIDTH, height: 200))
         pageView.delegate = self
         pageView.dataSource = self
-        pageView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
+        pageView.register(JSBannerCell.self, forCellWithReuseIdentifier: "JSBannerCell")
         pageView.automaticSlidingInterval = 4
         pageView.isInfinite = true
         self.addSubview(pageView)
@@ -93,11 +93,12 @@ extension JSHomeTopView:FSPagerViewDataSource,FSPagerViewDelegate {
     }
     
     func pagerView(_ pagerView:FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell:FSPagerViewCell = pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCell", at: index)
-        cell.isHighlighted = false
-        let model = self.bannerList[index]
-        cell.imageView?.kf.setImage(with: URL(string:model.coverImg))
+        let cell:JSBannerCell = pagerView.dequeueReusableCell(withReuseIdentifier: "JSBannerCell", at: index) as! JSBannerCell
+          
         
+        cell.images?.kf.setImage(with: URL(string:"https://img.zcool.cn/community/01ff055922592ab5b3086ed4075f3d.jpg"))
+        
+    
         return cell
     }
     
@@ -144,7 +145,6 @@ class CategoryCell:UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
 }
+
+

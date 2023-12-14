@@ -12,7 +12,7 @@ class JSTabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let view1 = JSBaseNavViewController(rootViewController: JSHomeViewController())
-        view1.title = "123"
+        view1.title = ""
         view1.tabBarItem = UITabBarItem(title: "首页", image:R.image.ic_home_tab1_unchecked()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.icHomeTab1Selected()?.withRenderingMode(.alwaysOriginal))
         self.addChild(view1)
         

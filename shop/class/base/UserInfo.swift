@@ -7,6 +7,7 @@
 
 import Foundation
 import HandyJSON
+import RxRelay
 
 class UserInfo {
     
@@ -15,6 +16,8 @@ class UserInfo {
     var isLogin = false
     
     var token = ""
+    
+    let shopCarNotice = BehaviorRelay(value: "")
     
     var user = JSUserModel()
     
@@ -44,6 +47,18 @@ class UserInfo {
             }
         }        
     }
+    
+   
+    func judgeLogin(vc:UIViewController,callBack:()->()){
+        if (isLogin == true) {
+            callBack()
+        } else {
+            let vc = JSLoginViewController()
+            vc.modalPresentationStyle = .fullScreen
+            vc.present(vc, animated: true)
+        }
+    }
+    
     
     private init(){
     }

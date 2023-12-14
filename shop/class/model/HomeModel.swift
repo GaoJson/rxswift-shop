@@ -22,6 +22,7 @@ struct GoodsModel:HandyJSON {
     var spec:String = ""
     var goodsPrice:String = ""
     var originalPrice:String = ""
+    var goodsContent:String = ""
 }
 
 struct BannerModel:HandyJSON {

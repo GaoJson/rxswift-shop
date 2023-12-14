@@ -13,6 +13,8 @@ class JSShopCarViewModel {
     
     let bag = DisposeBag()
     
+    var tableView:UITableView?
+    var bottomView:UIView?
     let dataList = BehaviorRelay<[JSShopCarModel]>(value: [])
     
     var selectAllFlag = BehaviorRelay<Bool>(value: false)
@@ -25,10 +27,18 @@ class JSShopCarViewModel {
     func loadList(){
         let list = JSShopCarModel.getModelList()
         dataList.accept(list)
+        if(list.count == 0) {
+            tableView?.noData?.isHidden = false
+            bottomView?.isHidden = true
+        } else {
+            tableView?.noData?.isHidden = true
+            bottomView?.isHidden = false
+        }
         countPrice()
     }
     
     func countPrice(){
+      
         var allPrice = 0.0
         var allCount = 0
         dataList.value.forEach { model in
@@ -51,5 +61,16 @@ class JSShopCarViewModel {
         }
         loadList()
     }
+    
+    func getSelectGoods()->Array<JSShopCarModel> {
+        var list = Array<JSShopCarModel>()
+        dataList.value.forEach { model in
+            if (model.selectFlag == 1){
+                list.append(model)
+            }
+        }
+        return list
+    }
+    
     
 }

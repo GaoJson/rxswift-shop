@@ -10,7 +10,11 @@ import RxSwift
 import RxCocoa
 
 class JSAddressViewController: JSBaseViewController {
-
+    
+    var selectFlag = false
+    
+    var selectCallback: ((_ model: JSAddressModel) -> ())? = nil
+    
     let disposeBag = DisposeBag()
     
     let addressList = BehaviorRelay<[JSAddressModel]>(value: [])
@@ -73,6 +77,13 @@ class JSAddressViewController: JSBaseViewController {
               
             }
             return cell
+        }.disposed(by: disposeBag)
+        tableView.rx.itemSelected.subscribe { index in
+            if(self.selectFlag) {
+               let model = self.addressList.value[index.element!.row]
+               self.selectCallback?(model)
+                self.navigationController?.popViewController(animated: true)
+            }
         }.disposed(by: disposeBag)
         
         

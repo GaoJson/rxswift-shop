@@ -27,7 +27,7 @@ class JSCategoryViewController: UIViewController {
         self.title = "分类"
         self.view.backgroundColor = .bckColor
         let leftView = UITableView()
-        leftView.register(UITableViewCell.self,forCellReuseIdentifier: "UITableViewCell")
+        leftView.register(UITableViewCell.self,forCellReuseIdentifier: "leftTableViewCell")
         leftView.backgroundColor = .bckColor
         self.view.addSubview(leftView)
         leftView.snp.makeConstraints { make in
@@ -39,7 +39,7 @@ class JSCategoryViewController: UIViewController {
         
         viewModel.leftList
             .bind(to: leftView.rx.items) { (tableView, row, element) in
-              let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
+              let cell = tableView.dequeueReusableCell(withIdentifier: "leftTableViewCell")!
                 cell.textLabel?.text = "\(element.cname)"
                 cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
                 cell.textLabel?.textAlignment = .center
@@ -51,7 +51,7 @@ class JSCategoryViewController: UIViewController {
         let rightView = UITableView()
         rightView.backgroundColor = .bckColor
         rightView.rowHeight = 90
-        rightView.register(UINib(nibName: "JSCatrgoryCell", bundle: nil),forCellReuseIdentifier: "UITableViewCell")
+        rightView.register(UINib(nibName: "JSCatrgoryCell", bundle: nil),forCellReuseIdentifier: "rightTableViewCell")
         self.view.addSubview(rightView)
         rightView.snp.makeConstraints { make in
             make.right.equalTo(0)
@@ -59,12 +59,10 @@ class JSCategoryViewController: UIViewController {
             make.bottom.equalTo(0)
             make.width.equalTo(UIDevice.SCREEN_WIDTH*0.73)
         }
-       
+        viewModel.rightTable = rightView
         viewModel.rightList.bind(to: rightView.rx.items) { (tableView, row, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell") as! JSCatrgoryCell
-            cell.img.kf.setImage(with: URL(string: element.goodsImg))
-            cell.name.text = element.goodsName
-            cell.price.text = "¥\(Double(element.goodsPrice) ?? 0.0)"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "rightTableViewCell") as! JSCatrgoryCell
+            cell.setModel(model: element)
             return cell
         }
         .disposed(by: disposeBag)
@@ -92,19 +90,26 @@ class JSCategoryViewController: UIViewController {
             case .noMoreData:
                 rightView.footer?.noticeNoMoreData()
             case .beingHeaderRefresh:
-                leftView.selectRow(at: [0,0], animated: false, scrollPosition: .none)
+                leftView.selectRow(at: [0,1], animated: false, scrollPosition: .none)
             default:
                 break
             }
         }
         ).disposed(by: disposeBag)
         
-        leftView.rx.itemSelected.subscribe{ [self]indexPath in
+        leftView.rx.itemSelected.subscribe{ [ self]indexPath in
             rightView.footer?.resetNoMoreData()
            let row =  indexPath.element?.row
            let model = viewModel.leftList.value[row ?? 0]
             viewModel.page = 1
             viewModel.loadRightData(cid: model.id)
+        }.disposed(by: disposeBag)
+        
+        rightView.rx.itemSelected.subscribe{ index in
+            let model = self.viewModel.rightList.value[index.element!.row]
+            let vc = JSGoodsDetailViewController()
+            vc.goodsId = model.id
+            self.navigationController?.pushViewController(vc, animated: true)
         }.disposed(by: disposeBag)
         
     }
