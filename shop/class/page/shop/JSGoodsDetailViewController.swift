@@ -139,8 +139,7 @@ class JSGoodsDetailViewController: JSBaseViewController {
         }
         webView.rx.didFinishLoad.subscribe { _ in
             webView.evaluateJavaScript("document.body.offsetHeight") { res, _ in
-                var height = Double("\(res!)")
-                debugPrint(height ?? 1)
+                let height = Double("\(res!)")
                 webView.snp.updateConstraints { make in
                     make.height.equalTo(height!)
                 }

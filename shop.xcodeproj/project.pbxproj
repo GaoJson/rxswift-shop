@@ -65,6 +65,7 @@
 		B2CE86D12AF0E0AF00C8CEF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D02AF0E0AF00C8CEF6 /* R.generated.swift */; };
 		B2CE86D52AF1007D00C8CEF6 /* httpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D42AF1007D00C8CEF6 /* httpTool.swift */; };
 		B2CE86D72AF103C900C8CEF6 /* JSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE86D62AF103C900C8CEF6 /* JSApi.swift */; };
+		B2E382CA2B2A9C8400D01663 /* JSOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E382C92B2A9C8400D01663 /* JSOrderDetailViewController.swift */; };
 		B2E96AA12B0B61B9001F22DA /* JSShopCarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E96A9F2B0B61B9001F22DA /* JSShopCarItemCell.swift */; };
 		B2E96AA22B0B61B9001F22DA /* JSShopCarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E96AA02B0B61B9001F22DA /* JSShopCarItemCell.xib */; };
 		B2E96AA42B0C9369001F22DA /* JSMineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */; };
@@ -147,6 +148,7 @@
 		B2CE86D02AF0E0AF00C8CEF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = live/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		B2CE86D42AF1007D00C8CEF6 /* httpTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = httpTool.swift; sourceTree = "<group>"; };
 		B2CE86D62AF103C900C8CEF6 /* JSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSApi.swift; sourceTree = "<group>"; };
+		B2E382C92B2A9C8400D01663 /* JSOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOrderDetailViewController.swift; sourceTree = "<group>"; };
 		B2E96A9F2B0B61B9001F22DA /* JSShopCarItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSShopCarItemCell.swift; sourceTree = "<group>"; };
 		B2E96AA02B0B61B9001F22DA /* JSShopCarItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSShopCarItemCell.xib; sourceTree = "<group>"; };
 		B2E96AA32B0C9369001F22DA /* JSMineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSMineViewModel.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B290E8412B26B7E600AE118B /* JSOrderSubmitViewModel.swift */,
 				B290E8472B284B8E00AE118B /* JSOrderListViewController.swift */,
 				B290E8492B284C1C00AE118B /* JSOrderListViewModel.swift */,
+				B2E382C92B2A9C8400D01663 /* JSOrderDetailViewController.swift */,
 			);
 			path = shop;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				B244B7142AFB3912009ED6E0 /* JSBaseDbModel.swift in Sources */,
 				B244B7172AFB3DC7009ED6E0 /* JSMineViewController.swift in Sources */,
 				B244B7122AFB1EFB009ED6E0 /* WCDBUtil.swift in Sources */,
+				B2E382CA2B2A9C8400D01663 /* JSOrderDetailViewController.swift in Sources */,
 				B290E8462B270D6000AE118B /* JSStringTool.swift in Sources */,
 				B2027AA02AF21B6D005496A8 /* HomeModel.swift in Sources */,
 				B2CE86D12AF0E0AF00C8CEF6 /* R.generated.swift in Sources */,

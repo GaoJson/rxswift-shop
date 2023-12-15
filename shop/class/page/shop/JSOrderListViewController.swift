@@ -109,7 +109,13 @@ class JSOrderListViewController: JSBaseViewController {
             return cell
         }.disposed(by: disponseBag)
         
-        
+        tableView.rx.itemSelected.subscribe { [self] idx in
+            let model = viewModel.orderList.value[idx.element!.row]
+            let vc = JSOrderDetailViewController()
+            vc.orderId = model.id!
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }.disposed(by: disponseBag)
         
     }
 }

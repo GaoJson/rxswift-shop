@@ -97,4 +97,11 @@ extension JSOrderModel {
         }
     }
     
+    static func selectObject(id:Int)->JSOrderModel {
+        let model:JSOrderModel? = try? WCDBUtil.share.dataBase?.getObject(on: Properties.all, fromTable:tableName,where: Properties.userId==UserInfo.share.user.id!&&Properties.id==id)
+        
+        return model!
+    }
+    
+    
 }

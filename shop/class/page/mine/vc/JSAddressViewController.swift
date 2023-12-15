@@ -19,22 +19,20 @@ class JSAddressViewController: JSBaseViewController {
     
     let addressList = BehaviorRelay<[JSAddressModel]>(value: [])
     
-    
+    var table:UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .bckColor
         self.title = "我的地址"
         self.setUI()
-
-        // Do any additional setup after loading the view.
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        let list = JSAddressModel.selectList()
-        addressList.accept(list)
-        
+        if table != nil {
+            loadData()
+        }
         if #available(iOS 13.0, *) {
             let appear = UINavigationBarAppearance()
             appear.backgroundColor = .white
@@ -48,9 +46,19 @@ class JSAddressViewController: JSBaseViewController {
         }
     }
 
+    func loadData() {
+        let list = JSAddressModel.selectList()
+        if list.count == 0 {
+            table?.noData?.isHidden = false
+        } else {
+            table?.noData?.isHidden = true
+        }
+        addressList.accept(list)
+    }
     
     func setUI() {
         let tableView = UITableView()
+        table = tableView
         tableView.backgroundColor = .white
         tableView.layer.cornerRadius = 10
         tableView.layer.masksToBounds = true
